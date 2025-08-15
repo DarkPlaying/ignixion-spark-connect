@@ -39,9 +39,8 @@ const RegistrationSection = () => {
         </div>
 
         {/* Registration Form */}
-        <div className="bg-gradient-card p-8 md:p-12 rounded-3xl border border-border shadow-2xl scroll-fade-in">
-          
-        </div>
+        <div className="bg-gradient-card p-8 md:p-12 rounded-3xl border border-border shadow-2xl scroll-fade-in">For Register: 
+https://docs.google.com/forms/d/e/1FAIpQLSfg6ZqtYQ2CMef4qSCj5p2I8v66uZ4AuPz0VOV7oK2Y9MkfRQ/viewform?usp=dialog</div>
       </div>
     </section>;
 };
