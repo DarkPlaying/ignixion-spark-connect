@@ -18,14 +18,6 @@ const HeroSection = () => {
     document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  const scrollToRegister = () => {
-    document.getElementById('register-box')?.scrollIntoView({ behavior: 'smooth' });
-  };
-
-  const scrollToEvents = () => {
-    document.getElementById('events')?.scrollIntoView({ behavior: 'smooth' });
-  };
-
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
@@ -65,58 +57,45 @@ const HeroSection = () => {
           Where Technology Sparks Creativity
         </h2>
         
-        {/* Animated Tagline - Centered with Glowing Gradient */}
+        {/* Animated Tagline */}
         <div className="h-16 md:h-20 mb-12 flex items-center justify-center">
-          <div className="relative">
+          <span className="text-3xl md:text-4xl lg:text-5xl font-display font-semibold">
             {phrases.map((phrase, index) => (
               <span
                 key={phrase}
-                className={`absolute inset-0 flex items-center justify-center transition-all duration-700 ease-in-out ${
+                className={`absolute transition-all duration-700 ease-in-out ${
                   index === currentPhrase
-                    ? "opacity-100 transform translate-y-0"
+                    ? "opacity-100 transform translate-y-0 text-glow"
                     : "opacity-0 transform translate-y-4"
+                } ${
+                  index === 0 ? "text-primary" : 
+                  index === 1 ? "text-secondary" : "text-accent"
                 }`}
               >
-                <span className="text-3xl md:text-4xl lg:text-5xl font-display font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-purple-600 bg-clip-text text-transparent"
-                  style={{
-                    filter: 'drop-shadow(0 0 10px rgba(139, 69, 255, 0.6)) drop-shadow(0 0 20px rgba(59, 130, 246, 0.4))',
-                    textShadow: '0 0 30px rgba(139, 69, 255, 0.5)'
-                  }}
-                >
-                  {phrase}
-                </span>
+                {phrase}
               </span>
             ))}
-          </div>
+          </span>
         </div>
         
         {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-          <Button variant="hero" size="lg" className="text-lg px-8 py-6" onClick={scrollToRegister}>
+        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
+          <Button variant="hero" size="lg" className="text-lg px-8 py-6">
             Register Now
           </Button>
-          <Button variant="outline" size="lg" className="text-lg px-8 py-6" onClick={scrollToEvents}>
+          <Button variant="outline" size="lg" className="text-lg px-8 py-6">
             Explore Events
           </Button>
         </div>
         
-        {/* Centered Down Arrow - 40px below buttons */}
-        <div className="hero-arrow flex justify-center mt-10">
-          <button
-            onClick={scrollToAbout}
-            className="group flex items-center justify-center animate-bounce hover:scale-110 transition-all duration-500"
-            aria-label="Scroll to about section"
-          >
-            <ChevronDown 
-              size={48} 
-              className="text-transparent bg-gradient-to-r from-purple-400 via-blue-500 to-pink-500 bg-clip-text"
-              style={{
-                filter: 'drop-shadow(0 0 12px rgba(139, 69, 255, 0.8)) drop-shadow(0 0 24px rgba(59, 130, 246, 0.6)) drop-shadow(0 0 36px rgba(236, 72, 153, 0.4))',
-                animation: 'bounce 2s infinite'
-              }}
-            />
-          </button>
-        </div>
+        {/* Scroll Indicator */}
+        <button
+          onClick={scrollToAbout}
+          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce hover:text-primary transition-colors duration-300"
+          aria-label="Scroll to about section"
+        >
+          <ChevronDown size={32} />
+        </button>
       </div>
     </section>
   );
