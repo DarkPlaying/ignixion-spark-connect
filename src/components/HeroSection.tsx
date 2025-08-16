@@ -79,7 +79,7 @@ const HeroSection = () => {
         </div>
         
         {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
+        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
           <Button variant="hero" size="lg" className="text-lg px-8 py-6">
             Register Now
           </Button>
@@ -88,14 +88,22 @@ const HeroSection = () => {
           </Button>
         </div>
         
-        {/* Scroll Indicator */}
-        <button
-          onClick={scrollToAbout}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce hover:text-primary transition-colors duration-300"
-          aria-label="Scroll to about section"
-        >
-          <ChevronDown size={32} />
-        </button>
+        {/* Centered Scroll Arrow - 30px below buttons */}
+        <div className="hero-arrow flex justify-center mt-8">
+          <button
+            onClick={scrollToAbout}
+            className="group flex items-center justify-center animate-bounce hover:animate-pulse transition-all duration-300"
+            aria-label="Scroll to about section"
+          >
+            <ChevronDown 
+              size={40} 
+              className="text-transparent bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text"
+              style={{
+                filter: 'drop-shadow(0 0 8px rgba(139, 69, 255, 0.7)) drop-shadow(0 0 16px rgba(59, 130, 246, 0.7)) drop-shadow(0 0 24px rgba(236, 72, 153, 0.5))'
+              }}
+            />
+          </button>
+        </div>
       </div>
     </section>
   );
