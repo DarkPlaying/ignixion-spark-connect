@@ -1,5 +1,6 @@
 import React from "react";
-import { Calendar, Clock, MapPin, Award } from "lucide-react";
+import { Calendar, Clock, MapPin, Award, Users } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const ScheduleSection = () => {
   const scheduleItems = [
@@ -7,7 +8,7 @@ const ScheduleSection = () => {
       time: "09:00 AM",
       title: "Registration Opens",
       description: "Welcome participants and team check-in",
-      icon: Calendar,
+      icon: Users,
       status: "completed"
     },
     {
@@ -28,27 +29,6 @@ const ScheduleSection = () => {
       time: "01:00 PM",
       title: "Lunch Break",
       description: "Networking session and refreshments",
-      icon: Clock,
-      status: "upcoming"
-    },
-    {
-      time: "02:00 PM",
-      title: "Creative Arts Events",
-      description: "Dance, Singing, Cooking, and Face Painting",
-      icon: Clock,
-      status: "upcoming"
-    },
-    {
-      time: "04:00 PM",
-      title: "Preliminary Results",
-      description: "Announcement of finalists",
-      icon: Clock,
-      status: "upcoming"
-    },
-    {
-      time: "05:00 PM",
-      title: "Final Rounds",
-      description: "Final presentations and performances",
       icon: Clock,
       status: "upcoming"
     },
@@ -84,11 +64,19 @@ const ScheduleSection = () => {
   };
 
   return (
-    <section className="py-20 px-6 bg-background">
-      <div className="max-w-4xl mx-auto">
+    <section className="relative py-20 px-6 bg-gradient-to-br from-background via-background/95 to-primary/5 overflow-hidden">
+      {/* Particle Background Effect */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute top-20 left-10 w-2 h-2 bg-primary rounded-full animate-pulse"></div>
+        <div className="absolute top-40 right-20 w-1 h-1 bg-secondary rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute bottom-40 left-20 w-1.5 h-1.5 bg-accent rounded-full animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute bottom-20 right-10 w-1 h-1 bg-highlight rounded-full animate-pulse" style={{ animationDelay: '0.5s' }}></div>
+      </div>
+
+      <div className="max-w-4xl mx-auto relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16 scroll-fade-in">
-          <h2 className="text-4xl md:text-5xl font-display font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-6xl font-display font-bold mb-6 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
             Event Schedule
           </h2>
           <p className="text-xl text-muted-foreground">
@@ -97,56 +85,91 @@ const ScheduleSection = () => {
         </div>
 
         {/* Timeline */}
-        <div className="relative">
-          {/* Timeline Line */}
-          <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-secondary to-accent" />
+        <div className="relative mb-20">
+          {/* Glowing Timeline Line */}
+          <div className="absolute left-8 top-0 bottom-0 w-1 bg-gradient-to-b from-primary via-secondary to-accent shadow-lg shadow-primary/20" />
 
           {/* Schedule Items */}
-          <div className="space-y-8">
+          <div className="space-y-12">
             {scheduleItems.map((item, index) => {
               const Icon = item.icon;
               
               return (
                 <div
                   key={item.title}
-                  className={`relative flex items-center gap-8 group scroll-fade-in`}
-                  style={{ animationDelay: `${index * 0.1}s` }}
+                  className={`relative flex items-center gap-8 group scroll-fade-in opacity-0 translate-y-8`}
+                  style={{ 
+                    animationDelay: `${index * 0.2}s`,
+                    animation: `fade-in 0.8s ease-out ${index * 0.2}s forwards, slideUp 0.8s ease-out ${index * 0.2}s forwards`
+                  }}
                 >
-                  {/* Timeline Dot */}
-                  <div className={`relative z-10 w-16 h-16 rounded-full border-4 ${getStatusColor(item.status)} ${getBackgroundColor(item.status)} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                    <Icon size={24} />
+                  {/* Glowing Timeline Dot */}
+                  <div className={`relative z-10 w-20 h-20 rounded-full border-4 ${getStatusColor(item.status)} ${getBackgroundColor(item.status)} flex items-center justify-center group-hover:scale-110 transition-all duration-500 shadow-2xl`}>
+                    <Icon size={28} />
+                    {item.status === "current" && (
+                      <div className="absolute inset-0 rounded-full border-4 border-primary/50 animate-ping"></div>
+                    )}
                   </div>
 
-                  {/* Content Card */}
-                  <div className={`flex-1 p-6 rounded-2xl border-2 border-border hover-lift ${getBackgroundColor(item.status)} transition-all duration-300`}>
-                    <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-                      <div>
-                        <div className="flex items-center gap-4 mb-2">
-                          <span className={`text-sm font-mono font-medium px-3 py-1 rounded-full ${
-                            item.status === "current" 
-                              ? "bg-primary text-primary-foreground" 
-                              : "bg-muted text-muted-foreground"
-                          }`}>
-                            {item.time}
+                  {/* Futuristic Content Card */}
+                  <div className={`flex-1 p-8 rounded-3xl border-2 ${
+                    item.status === "current" 
+                      ? "border-primary/50 bg-gradient-to-r from-primary/10 to-secondary/10 shadow-2xl shadow-primary/20" 
+                      : "border-border/50 bg-gradient-to-r from-card/80 to-card/40 backdrop-blur-sm"
+                  } hover:shadow-2xl hover:shadow-primary/10 hover:scale-105 transition-all duration-500 group-hover:border-primary/30`}>
+                    <div className="flex flex-col gap-4">
+                      <div className="flex items-center gap-6">
+                        <span className={`text-2xl md:text-3xl font-display font-bold ${
+                          item.status === "current" 
+                            ? "text-primary" 
+                            : "text-foreground"
+                        }`}>
+                          {item.time}
+                        </span>
+                        {item.status === "current" && (
+                          <span className="text-sm px-4 py-2 bg-gradient-to-r from-primary to-secondary text-primary-foreground rounded-full animate-pulse font-semibold shadow-lg">
+                            LIVE NOW
                           </span>
-                          {item.status === "current" && (
-                            <span className="text-xs px-2 py-1 bg-primary/20 text-primary rounded-full animate-pulse">
-                              LIVE NOW
-                            </span>
-                          )}
-                        </div>
-                        <h3 className="text-xl font-display font-semibold text-foreground mb-2">
-                          {item.title}
-                        </h3>
-                        <p className="text-muted-foreground">
-                          {item.description}
-                        </p>
+                        )}
                       </div>
+                      <h3 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-2">
+                        {item.title}
+                      </h3>
+                      <p className="text-lg text-muted-foreground">
+                        {item.description}
+                      </p>
                     </div>
                   </div>
                 </div>
               );
             })}
+          </div>
+        </div>
+
+        {/* Pro Registration Box */}
+        <div className="scroll-fade-in">
+          <div className="relative p-8 md:p-12 bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10 rounded-3xl border-2 border-primary/30 backdrop-blur-sm shadow-2xl shadow-primary/20 group">
+            {/* Pulsing Glow Effect */}
+            <div className="absolute inset-0 rounded-3xl border-2 border-primary/20 animate-pulse"></div>
+            <div className="absolute -inset-1 rounded-3xl bg-gradient-to-r from-primary/20 via-secondary/20 to-accent/20 blur-lg animate-pulse"></div>
+            
+            <div className="relative z-10 text-center">
+              <h3 className="text-3xl md:text-4xl font-display font-bold mb-4 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+                Join IGNIXION
+              </h3>
+              <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+                Ready to spark your creativity? Register now and be part of this incredible journey
+              </p>
+              
+              <Button
+                variant="hero"
+                size="lg"
+                className="text-xl px-12 py-6 font-bold bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 hover:shadow-2xl hover:shadow-primary/40 hover:scale-110 transition-all duration-500 animate-pulse"
+                onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSfg6ZqtYQ2CMef4qSCj5p2I8v66uZ4AuPz0VOV7oK2Y9MkfRQ/viewform?usp=dialog', '_blank')}
+              >
+                Register Now
+              </Button>
+            </div>
           </div>
         </div>
 
@@ -158,7 +181,7 @@ const ScheduleSection = () => {
             { label: "Prize Pool", value: "₹50K+", color: "text-accent" },
             { label: "Duration", value: "1 Day", color: "text-highlight" }
           ].map((stat, index) => (
-            <div key={stat.label} className="text-center p-6 bg-gradient-card rounded-2xl border border-border">
+            <div key={stat.label} className="text-center p-6 bg-gradient-to-br from-card/50 to-card/20 backdrop-blur-sm rounded-2xl border border-border/50 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300">
               <div className={`text-3xl md:text-4xl font-display font-bold ${stat.color} mb-2`}>
                 {stat.value}
               </div>
@@ -169,6 +192,7 @@ const ScheduleSection = () => {
           ))}
         </div>
       </div>
+
     </section>
   );
 };
