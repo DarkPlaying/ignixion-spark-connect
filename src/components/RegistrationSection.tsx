@@ -26,22 +26,6 @@ const RegistrationSection = () => {
     // Handle form submission
     console.log("Form submitted:", formData);
   };
-  return <section className="py-20 px-6 bg-gradient-to-br from-card to-muted/20">
-      <div className="max-w-4xl mx-auto">
-        {/* Section Header */}
-        <div className="text-center mb-16 scroll-fade-in">
-          <h2 className="text-4xl md:text-5xl font-display font-bold mb-6 bg-gradient-accent bg-clip-text text-transparent">
-            Join IGNIXION
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Ready to spark your creativity? Register now and be part of this incredible journey
-          </p>
-        </div>
-
-        {/* Registration Form */}
-        <div className="bg-gradient-card p-8 md:p-12 rounded-3xl border border-border shadow-2xl scroll-fade-in">For Register: 
-https://docs.google.com/forms/d/e/1FAIpQLSfg6ZqtYQ2CMef4qSCj5p2I8v66uZ4AuPz0VOV7oK2Y9MkfRQ/viewform?usp=dialog</div>
-      </div>
-    </section>;
+  return;
 };
 export default RegistrationSection;
