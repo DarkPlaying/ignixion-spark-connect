@@ -1,53 +1,47 @@
 import React from "react";
 import { Lightbulb, Zap, Users } from "lucide-react";
-
 const AboutSection = () => {
-  const features = [
-    {
-      icon: Lightbulb,
-      title: "Innovation",
-      description: "Cutting-edge ideas meet creative expression",
-      color: "text-primary"
-    },
-    {
-      icon: Zap,
-      title: "Creativity",
-      description: "Where artistic vision sparks technological solutions",
-      color: "text-secondary"
-    },
-    {
-      icon: Users,
-      title: "Collaboration",
-      description: "Building bridges between tech minds and creative souls",
-      color: "text-accent"
-    }
-  ];
-
-  return (
-    <section id="about" className="py-20 px-6 bg-gradient-to-br from-card to-muted/20">
+  const features = [{
+    icon: Lightbulb,
+    title: "Innovation",
+    description: "Cutting-edge ideas meet creative expression",
+    color: "text-primary"
+  }, {
+    icon: Zap,
+    title: "Creativity",
+    description: "Where artistic vision sparks technological solutions",
+    color: "text-secondary"
+  }, {
+    icon: Users,
+    title: "Collaboration",
+    description: "Building bridges between tech minds and creative souls",
+    color: "text-accent"
+  }];
+  return <section id="about" className="py-20 px-6 bg-gradient-to-br from-card to-muted/20">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16 scroll-fade-in">
           <h2 className="text-4xl md:text-5xl font-display font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent">
             About IGNIXION
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            IGNIXION is more than an event—it's a revolutionary platform where technology 
-            and arts converge to create something extraordinary. Join us for an immersive 
-            experience that celebrates innovation, creativity, and the power of human connection.
-          </p>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">IGNIXION ’25 is not just an event—it’s a fusion of Technology and Arts, designed to spark creativity, innovation, and collaboration. This inter-college festival provides a vibrant platform for students to showcase their talents, exchange ideas, and build meaningful connections.
+
+
+🚀 Event at a Glance:
+
+📅 Date: 18th & 19th August 2025
+
+⏰ Time: 10:00 AM – 01:30 PM
+📍 Venue: Vel Dr. RR & Dr. SR Convention Centre, Chennai</p>
         </div>
 
         {/* Feature Cards */}
         <div className="grid md:grid-cols-3 gap-8">
           {features.map((feature, index) => {
-            const Icon = feature.icon;
-            return (
-              <div
-                key={feature.title}
-                className="bg-gradient-card p-8 rounded-2xl border border-border hover-lift hover-glow group scroll-fade-in"
-                style={{ animationDelay: `${index * 0.2}s` }}
-              >
+          const Icon = feature.icon;
+          return <div key={feature.title} className="bg-gradient-card p-8 rounded-2xl border border-border hover-lift hover-glow group scroll-fade-in" style={{
+            animationDelay: `${index * 0.2}s`
+          }}>
                 <div className={`${feature.color} mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <Icon size={48} />
                 </div>
@@ -57,9 +51,8 @@ const AboutSection = () => {
                 <p className="text-muted-foreground leading-relaxed">
                   {feature.description}
                 </p>
-              </div>
-            );
-          })}
+              </div>;
+        })}
         </div>
 
         {/* Vision Statement */}
@@ -76,8 +69,6 @@ const AboutSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default AboutSection;
