@@ -18,6 +18,14 @@ const HeroSection = () => {
     document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const scrollToRegister = () => {
+    document.getElementById('register-box')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const scrollToEvents = () => {
+    document.getElementById('events')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
@@ -84,10 +92,10 @@ const HeroSection = () => {
         
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-          <Button variant="hero" size="lg" className="text-lg px-8 py-6">
+          <Button variant="hero" size="lg" className="text-lg px-8 py-6" onClick={scrollToRegister}>
             Register Now
           </Button>
-          <Button variant="outline" size="lg" className="text-lg px-8 py-6">
+          <Button variant="outline" size="lg" className="text-lg px-8 py-6" onClick={scrollToEvents}>
             Explore Events
           </Button>
         </div>
