@@ -57,25 +57,29 @@ const HeroSection = () => {
           Where Technology Sparks Creativity
         </h2>
         
-        {/* Animated Tagline */}
+        {/* Animated Tagline - Centered with Glowing Gradient */}
         <div className="h-16 md:h-20 mb-12 flex items-center justify-center">
-          <span className="text-3xl md:text-4xl lg:text-5xl font-display font-semibold">
+          <div className="relative">
             {phrases.map((phrase, index) => (
               <span
                 key={phrase}
-                className={`absolute transition-all duration-700 ease-in-out ${
+                className={`absolute inset-0 flex items-center justify-center transition-all duration-700 ease-in-out ${
                   index === currentPhrase
-                    ? "opacity-100 transform translate-y-0 text-glow"
+                    ? "opacity-100 transform translate-y-0"
                     : "opacity-0 transform translate-y-4"
-                } ${
-                  index === 0 ? "text-primary" : 
-                  index === 1 ? "text-secondary" : "text-accent"
                 }`}
               >
-                {phrase}
+                <span className="text-3xl md:text-4xl lg:text-5xl font-display font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-purple-600 bg-clip-text text-transparent"
+                  style={{
+                    filter: 'drop-shadow(0 0 10px rgba(139, 69, 255, 0.6)) drop-shadow(0 0 20px rgba(59, 130, 246, 0.4))',
+                    textShadow: '0 0 30px rgba(139, 69, 255, 0.5)'
+                  }}
+                >
+                  {phrase}
+                </span>
               </span>
             ))}
-          </span>
+          </div>
         </div>
         
         {/* CTA Buttons */}
@@ -88,18 +92,19 @@ const HeroSection = () => {
           </Button>
         </div>
         
-        {/* Centered Scroll Arrow - 30px below buttons */}
-        <div className="hero-arrow flex justify-center mt-8">
+        {/* Centered Down Arrow - 40px below buttons */}
+        <div className="hero-arrow flex justify-center mt-10">
           <button
             onClick={scrollToAbout}
-            className="group flex items-center justify-center animate-bounce hover:animate-pulse transition-all duration-300"
+            className="group flex items-center justify-center animate-bounce hover:scale-110 transition-all duration-500"
             aria-label="Scroll to about section"
           >
             <ChevronDown 
-              size={40} 
-              className="text-transparent bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text"
+              size={48} 
+              className="text-transparent bg-gradient-to-r from-purple-400 via-blue-500 to-pink-500 bg-clip-text"
               style={{
-                filter: 'drop-shadow(0 0 8px rgba(139, 69, 255, 0.7)) drop-shadow(0 0 16px rgba(59, 130, 246, 0.7)) drop-shadow(0 0 24px rgba(236, 72, 153, 0.5))'
+                filter: 'drop-shadow(0 0 12px rgba(139, 69, 255, 0.8)) drop-shadow(0 0 24px rgba(59, 130, 246, 0.6)) drop-shadow(0 0 36px rgba(236, 72, 153, 0.4))',
+                animation: 'bounce 2s infinite'
               }}
             />
           </button>
