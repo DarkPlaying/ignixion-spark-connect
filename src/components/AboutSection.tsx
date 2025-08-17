@@ -24,15 +24,7 @@ const AboutSection = () => {
           <h2 className="text-4xl md:text-5xl font-display font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent">
             About IGNIXION
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">IGNIXION ’25 is not just an event—it’s a fusion of Technology and Arts, designed to spark creativity, innovation, and collaboration. This inter-college festival provides a vibrant platform for students to showcase their talents, exchange ideas, and build meaningful connections.
-
-
-🚀 Event at a Glance:
-
-📅 Date: 18th & 19th August 2025
-
-⏰ Time: 10:00 AM – 01:30 PM
-📍 Venue: Vel Dr. RR & Dr. SR Convention Centre, Chennai</p>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">IGNIXION ’25 is not just an event—it’s a fusion of Technology and Arts, designed to spark creativity, innovation, and collaboration. This inter-college festival provides a vibrant platform for students to showcase their talents, exchange ideas, and build meaningful connections. </p>
         </div>
 
         {/* Feature Cards */}
