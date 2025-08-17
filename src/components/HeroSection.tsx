@@ -70,8 +70,8 @@ const HeroSection = () => {
         {/* Centered Down Arrow - 40px below buttons */}
         <div className="hero-arrow flex justify-center mt-10">
           <button onClick={scrollToAbout} className="group flex items-center justify-center animate-bounce hover:scale-110 transition-all duration-500" aria-label="Scroll to about section">
-            <ChevronDown size={48} className="text-transparent bg-gradient-to-r from-purple-400 via-blue-500 to-pink-500 bg-clip-text" style={{
-            filter: 'drop-shadow(0 0 12px rgba(139, 69, 255, 0.8)) drop-shadow(0 0 24px rgba(59, 130, 246, 0.6)) drop-shadow(0 0 36px rgba(236, 72, 153, 0.4))',
+            <ChevronDown size={40} className="text-white drop-shadow-lg" style={{
+            filter: 'drop-shadow(0 0 8px rgba(255, 255, 255, 0.5))',
             animation: 'bounce 2s infinite'
           }} />
           </button>
