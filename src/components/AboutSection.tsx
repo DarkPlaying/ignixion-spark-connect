@@ -1,5 +1,6 @@
 import React from "react";
 import { Lightbulb, Zap, Users } from "lucide-react";
+import EventGlanceSection from "./EventGlanceSection";
 const AboutSection = () => {
   const features = [{
     icon: Lightbulb,
@@ -17,7 +18,9 @@ const AboutSection = () => {
     description: "Building bridges between tech minds and creative souls",
     color: "text-accent"
   }];
-  return <section id="about" className="py-20 px-6 bg-gradient-to-br from-card to-muted/20">
+  return (
+    <>
+    <section id="about" className="py-20 px-6 bg-gradient-to-br from-card to-muted/20">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16 scroll-fade-in">
@@ -61,6 +64,11 @@ const AboutSection = () => {
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+
+    {/* Event at a Glance Section */}
+    <EventGlanceSection />
+    </>
+  );
 };
 export default AboutSection;
