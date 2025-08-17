@@ -40,8 +40,12 @@ const RegistrationSection = () => {
         </div>
 
         {/* Registration Form */}
-        <div className="bg-gradient-card p-8 rounded-3xl border border-border hover-glow scroll-fade-in">
-          <form onSubmit={handleSubmit} className="space-y-6">
+        <div className="scroll-fade-in">
+          <div className="relative bg-gradient-card p-8 rounded-3xl border border-border hover-glow">
+            {/* Pulsing Glow Effect */}
+            <div className="absolute -inset-1 rounded-3xl bg-gradient-to-r from-primary/20 via-secondary/20 to-accent/20 blur-lg animate-pulse"></div>
+            <div className="relative z-10">
+              <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid md:grid-cols-2 gap-6">
               <div>
                 <Label htmlFor="name" className="flex items-center gap-2 text-foreground mb-2">
@@ -141,8 +145,10 @@ const RegistrationSection = () => {
               className="w-full bg-gradient-primary hover:scale-[1.02] transition-all duration-300 text-primary-foreground font-semibold py-3"
             >
               Complete Registration
-            </Button>
-          </form>
+              </Button>
+            </form>
+            </div>
+          </div>
         </div>
       </div>
     </section>

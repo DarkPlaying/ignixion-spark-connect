@@ -151,7 +151,7 @@ const ScheduleSection = () => {
           <div className="relative p-8 md:p-12 bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10 rounded-3xl border-2 border-primary/30 backdrop-blur-sm shadow-2xl shadow-primary/20 group">
             {/* Pulsing Glow Effect */}
             <div className="absolute inset-0 rounded-3xl border-2 border-primary/20 animate-pulse"></div>
-            <div className="absolute -inset-1 rounded-3xl bg-gradient-to-r from-primary/20 via-secondary/20 to-accent/20 blur-lg animate-pulse"></div>
+            
             
             <div className="relative z-10 text-center">
               <h3 className="text-3xl md:text-4xl font-display font-bold mb-4 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
