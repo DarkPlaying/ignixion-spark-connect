@@ -1,5 +1,5 @@
 import React from "react";
-import { Music, Users, Mic, ChefHat, Palette } from "lucide-react";
+import { Music, Users, Mic, ChefHat, Palette, Gavel } from "lucide-react";
 
 const NonTechnicalEventsSection = () => {
   const nonTechnicalEvents = [
@@ -82,6 +82,24 @@ const NonTechnicalEventsSection = () => {
       ],
       gradient: "from-secondary/20 to-primary/20",
       iconColor: "text-secondary"
+    },
+    {
+      icon: Gavel,
+      title: "IPL Auction",
+      duration: "2 Rounds",
+      teamSize: "Up to 3 members",
+      description: "Experience the thrill of cricket strategy in IGNIXION's IPL Auction event! Test your sports knowledge in the quiz round and build your dream squad in the exciting auction round.",
+      rules: [
+        "Teams of max 3 members",
+        "Round 1: 30-question quiz on cricket, IPL, and sports knowledge",
+        "Top 10 teams advance to Round 2: IPL Auction",
+        "Each team gets ₹60 Crores to buy exactly 8 players: 3 Batters, 2 Bowlers, 2 All-Rounders, 1 Wicket-Keeper",
+        "Squad rules: 2 Foreign Players, 5 Indian Players, 1 Uncapped Player, 1 Star Player",
+        "Failure to meet criteria = Disqualification",
+        "Winner decided based on highest Fantasy Points + Balance Amount"
+      ],
+      gradient: "from-primary/20 to-accent/20",
+      iconColor: "text-primary"
     }
   ];
 
