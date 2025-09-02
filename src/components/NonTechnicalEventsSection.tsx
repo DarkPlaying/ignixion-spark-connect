@@ -87,16 +87,19 @@ const NonTechnicalEventsSection = () => {
       icon: Gavel,
       title: "IPL Auction",
       duration: "2 Rounds",
-      teamSize: "Up to 3 members",
-      description: "Experience the thrill of cricket strategy in IGNIXION's IPL Auction event! Test your sports knowledge in the quiz round and build your dream squad in the exciting auction round.",
+      teamSize: "Up to 3 Members",
+      description: "Test your cricket knowledge and strategy skills in IGNIXION's IPL Auction. Compete in a quiz round, then build your dream squad in an exciting live auction.",
       rules: [
-        "Teams of max 3 members",
-        "Round 1: 30-question quiz on cricket, IPL, and sports knowledge",
-        "Top 10 teams advance to Round 2: IPL Auction",
-        "Each team gets ₹60 Crores to buy exactly 8 players: 3 Batters, 2 Bowlers, 2 All-Rounders, 1 Wicket-Keeper",
-        "Squad rules: 2 Foreign Players, 5 Indian Players, 1 Uncapped Player, 1 Star Player",
-        "Failure to meet criteria = Disqualification",
-        "Winner decided based on highest Fantasy Points + Balance Amount"
+        "Each team can have a maximum of 3 members",
+        "Round 1: 30 questions on cricket, IPL, and general sports knowledge",
+        "Top 10 teams advance to Round 2: IPL Auction Round",
+        "Each team gets ₹60 Crores to build a squad of 8 players",
+        "Squad requirements: 3 Batters, 2 Bowlers, 2 All-rounders, 1 Wicket-keeper", 
+        "Player rules: 2 Foreign Players, 5 Indian Players, 1 Uncapped Player, 1 Star Player (mandatory)",
+        "No electronic gadgets allowed except calculators",
+        "Teams failing to meet squad criteria will be eliminated",
+        "Winner = Highest total score (Fantasy Points + Balance Amount)",
+        "Judges' decision is final and binding"
       ],
       gradient: "from-primary/20 to-accent/20",
       iconColor: "text-primary"
