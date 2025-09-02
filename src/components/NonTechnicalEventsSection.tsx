@@ -124,6 +124,126 @@ const NonTechnicalEventsSection = () => {
           {nonTechnicalEvents.map((event, index) => {
             const Icon = event.icon;
             
+            // Special handling for IPL Auction event
+            if (event.title === "IPL Auction") {
+              return (
+                <div
+                  key={event.title}
+                  className={`group bg-gradient-to-br ${event.gradient} backdrop-blur-sm p-6 rounded-2xl border border-border hover-lift scroll-fade-in relative overflow-hidden lg:col-span-2`}
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  {/* Background Pattern */}
+                  <div className="absolute inset-0 opacity-5 bg-[radial-gradient(circle_at_50%_50%,_var(--primary)_1px,_transparent_1px)] bg-[length:24px_24px]" />
+                  
+                  {/* Content */}
+                  <div className="relative z-10">
+                    {/* Header */}
+                    <div className="flex items-center gap-3 mb-6">
+                      <div className={`${event.iconColor} group-hover:scale-110 transition-transform duration-300`}>
+                        <Icon size={40} />
+                      </div>
+                      <div>
+                        <h3 className="text-2xl font-display font-bold text-foreground">🔥 IPL AUCTION RULES</h3>
+                        <div className="flex gap-2 mt-2">
+                          <span className="px-3 py-1 bg-card/60 rounded-full text-xs font-medium text-muted-foreground">
+                            2 Rounds
+                          </span>
+                          <span className="px-3 py-1 bg-card/60 rounded-full text-xs font-medium text-muted-foreground">
+                            Up to 3 Members
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Rules Sections */}
+                    <div className="space-y-4 text-sm">
+                      {/* General Rules */}
+                      <div>
+                        <h4 className="font-semibold text-foreground mb-2 flex items-center gap-2">
+                          <span>⚡</span> General Rules
+                        </h4>
+                        <ul className="space-y-1 text-muted-foreground">
+                          <li className="flex items-start gap-2">
+                            <span>•</span> Max 3 members per team
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <span>•</span> Event has 2 rounds: Quiz + Auction
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <span>•</span> Only calculators allowed (no mobiles/laptops)
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <span>•</span> Misbehavior = Disqualification
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <span>•</span> Judges' decision is final
+                          </li>
+                        </ul>
+                      </div>
+
+                      {/* Round 1 */}
+                      <div>
+                        <h4 className="font-semibold text-foreground mb-2 flex items-center gap-2">
+                          <span>🧠</span> Round 1 – Quiz
+                        </h4>
+                        <ul className="space-y-1 text-muted-foreground">
+                          <li className="flex items-start gap-2">
+                            <span>•</span> 30 questions on cricket, IPL, sports
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <span>•</span> Attempt all within time limit
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <span>•</span> Top 10 teams qualify for Auction
+                          </li>
+                        </ul>
+                      </div>
+
+                      {/* Round 2 */}
+                      <div>
+                        <h4 className="font-semibold text-foreground mb-2 flex items-center gap-2">
+                          <span>💰</span> Round 2 – Auction
+                        </h4>
+                        <ul className="space-y-1 text-muted-foreground">
+                          <li className="flex items-start gap-2">
+                            <span>•</span> Budget: ₹60 Crores per team
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <span>•</span> Buy exactly 8 players: 3 Batters, 2 Bowlers, 2 All-rounders, 1 Wicket-keeper
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <span>•</span> Player Rules: 2 Foreign, 5 Indian, 1 Uncapped, 1 Star Player (compulsory)
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <span>•</span> Teams not meeting criteria = eliminated
+                          </li>
+                        </ul>
+                      </div>
+
+                      {/* Scoring */}
+                      <div>
+                        <h4 className="font-semibold text-foreground mb-2 flex items-center gap-2">
+                          <span>🌟</span> Scoring & Winner
+                        </h4>
+                        <ul className="space-y-1 text-muted-foreground">
+                          <li className="flex items-start gap-2">
+                            <span>•</span> Players have Fantasy Points
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <span>•</span> Team score = Fantasy Points + Balance left
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <span>•</span> Highest valid score = Winner
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              );
+            }
+            
+            // Regular event cards
             return (
               <div
                 key={event.title}
