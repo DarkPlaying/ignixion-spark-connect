@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ChevronDown, Code, Laptop, Zap, FileText, Brain, Video } from "lucide-react";
+import { ChevronDown, Code, Laptop, Zap, FileText, Brain, Video, Film } from "lucide-react";
 
 const TechnicalEventsSection = () => {
   const [openEvent, setOpenEvent] = useState<number | null>(null);
@@ -88,6 +88,21 @@ const TechnicalEventsSection = () => {
         "Judged on creativity, storytelling, and technical execution"
       ],
       color: "border-secondary/30 hover:border-secondary"
+    },
+    {
+      icon: Film,
+      title: "Short Film",
+      teamSize: "Team (2–5 members)",
+      description: "Showcase your creativity by producing a short film within the given theme and time limit.",
+      rules: [
+        "Team participation: 2–5 members",
+        "Time limit: 48 hours for film submission",
+        "Theme will be announced on the spot",
+        "Maximum film duration: 7 minutes",
+        "Bring your own filming and editing equipment",
+        "Judging criteria: originality, storytelling, cinematography, editing, and overall impact"
+      ],
+      color: "border-accent/30 hover:border-accent"
     }
   ];
 
