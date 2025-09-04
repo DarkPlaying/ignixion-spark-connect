@@ -119,18 +119,134 @@ const NonTechnicalEventsSection = () => {
           </p>
         </div>
 
-        {/* Events Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {nonTechnicalEvents.map((event, index) => {
-            const Icon = event.icon;
-            
-            // Special handling for IPL Auction event
-            if (event.title === "IPL Auction") {
+        {/* Events Layout */}
+        <div className="space-y-8">
+          {/* First Row: Dance, Ramp Walk, Singing */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {nonTechnicalEvents.slice(0, 3).map((event, index) => {
+              const Icon = event.icon;
+              
               return (
                 <div
                   key={event.title}
-                  className={`group bg-gradient-to-br ${event.gradient} backdrop-blur-sm p-6 rounded-2xl border border-border hover-lift scroll-fade-in relative overflow-hidden lg:col-span-2`}
+                  className={`group bg-gradient-to-br ${event.gradient} backdrop-blur-sm p-8 rounded-2xl border border-border hover-lift scroll-fade-in relative overflow-hidden`}
                   style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  {/* Background Pattern */}
+                  <div className="absolute inset-0 opacity-5 bg-[radial-gradient(circle_at_50%_50%,_var(--primary)_1px,_transparent_1px)] bg-[length:24px_24px]" />
+                  
+                  {/* Content */}
+                  <div className="relative z-10">
+                    {/* Icon */}
+                    <div className={`${event.iconColor} mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                      <Icon size={40} />
+                    </div>
+
+                    {/* Event Info */}
+                    <h3 className="text-xl font-display font-semibold mb-2 text-foreground">
+                      {event.title}
+                    </h3>
+                    
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      <span className="px-3 py-1 bg-card/60 rounded-full text-xs font-medium text-muted-foreground">
+                        {event.duration}
+                      </span>
+                      <span className="px-3 py-1 bg-card/60 rounded-full text-xs font-medium text-muted-foreground">
+                        {event.teamSize}
+                      </span>
+                    </div>
+
+                    <p className="text-muted-foreground text-sm mb-6 leading-relaxed">
+                      {event.description}
+                    </p>
+
+                    {/* Rules */}
+                    <div className="space-y-2">
+                      <h4 className="font-medium text-foreground text-sm">Key Rules:</h4>
+                      <ul className="space-y-1">
+                        {event.rules.slice(0, 3).map((rule, ruleIndex) => (
+                          <li key={ruleIndex} className="flex items-start gap-2">
+                            <div className="w-1.5 h-1.5 bg-primary rounded-full mt-1.5 flex-shrink-0" />
+                            <span className="text-xs text-muted-foreground">{rule}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+
+          {/* Second Row: Instant Cooking and Face Painting centered */}
+          <div className="flex justify-center">
+            <div className="grid md:grid-cols-2 gap-8 max-w-4xl">
+              {nonTechnicalEvents.slice(3, 5).map((event, index) => {
+                const Icon = event.icon;
+                
+                return (
+                  <div
+                    key={event.title}
+                    className={`group bg-gradient-to-br ${event.gradient} backdrop-blur-sm p-8 rounded-2xl border border-border hover-lift scroll-fade-in relative overflow-hidden`}
+                    style={{ animationDelay: `${(index + 3) * 0.1}s` }}
+                  >
+                    {/* Background Pattern */}
+                    <div className="absolute inset-0 opacity-5 bg-[radial-gradient(circle_at_50%_50%,_var(--primary)_1px,_transparent_1px)] bg-[length:24px_24px]" />
+                    
+                    {/* Content */}
+                    <div className="relative z-10">
+                      {/* Icon */}
+                      <div className={`${event.iconColor} mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                        <Icon size={40} />
+                      </div>
+
+                      {/* Event Info */}
+                      <h3 className="text-xl font-display font-semibold mb-2 text-foreground">
+                        {event.title}
+                      </h3>
+                      
+                      <div className="flex flex-wrap gap-2 mb-4">
+                        <span className="px-3 py-1 bg-card/60 rounded-full text-xs font-medium text-muted-foreground">
+                          {event.duration}
+                        </span>
+                        <span className="px-3 py-1 bg-card/60 rounded-full text-xs font-medium text-muted-foreground">
+                          {event.teamSize}
+                        </span>
+                      </div>
+
+                      <p className="text-muted-foreground text-sm mb-6 leading-relaxed">
+                        {event.description}
+                      </p>
+
+                      {/* Rules */}
+                      <div className="space-y-2">
+                        <h4 className="font-medium text-foreground text-sm">Key Rules:</h4>
+                        <ul className="space-y-1">
+                          {event.rules.slice(0, 3).map((rule, ruleIndex) => (
+                            <li key={ruleIndex} className="flex items-start gap-2">
+                              <div className="w-1.5 h-1.5 bg-primary rounded-full mt-1.5 flex-shrink-0" />
+                              <span className="text-xs text-muted-foreground">{rule}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Third Row: IPL Auction full width */}
+          <div>
+            {(() => {
+              const event = nonTechnicalEvents[5]; // IPL Auction
+              const Icon = event.icon;
+              
+              return (
+                <div
+                  className={`group bg-gradient-to-br ${event.gradient} backdrop-blur-sm p-6 rounded-2xl border border-border hover-lift scroll-fade-in relative overflow-hidden`}
+                  style={{ animationDelay: '0.5s' }}
                 >
                   {/* Background Pattern */}
                   <div className="absolute inset-0 opacity-5 bg-[radial-gradient(circle_at_50%_50%,_var(--primary)_1px,_transparent_1px)] bg-[length:24px_24px]" />
@@ -241,59 +357,8 @@ const NonTechnicalEventsSection = () => {
                   </div>
                 </div>
               );
-            }
-            
-            // Regular event cards
-            return (
-              <div
-                key={event.title}
-                className={`group bg-gradient-to-br ${event.gradient} backdrop-blur-sm p-8 rounded-2xl border border-border hover-lift scroll-fade-in relative overflow-hidden`}
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                {/* Background Pattern */}
-                <div className="absolute inset-0 opacity-5 bg-[radial-gradient(circle_at_50%_50%,_var(--primary)_1px,_transparent_1px)] bg-[length:24px_24px]" />
-                
-                {/* Content */}
-                <div className="relative z-10">
-                  {/* Icon */}
-                  <div className={`${event.iconColor} mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                    <Icon size={40} />
-                  </div>
-
-                  {/* Event Info */}
-                  <h3 className="text-xl font-display font-semibold mb-2 text-foreground">
-                    {event.title}
-                  </h3>
-                  
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    <span className="px-3 py-1 bg-card/60 rounded-full text-xs font-medium text-muted-foreground">
-                      {event.duration}
-                    </span>
-                    <span className="px-3 py-1 bg-card/60 rounded-full text-xs font-medium text-muted-foreground">
-                      {event.teamSize}
-                    </span>
-                  </div>
-
-                  <p className="text-muted-foreground text-sm mb-6 leading-relaxed">
-                    {event.description}
-                  </p>
-
-                  {/* Rules */}
-                  <div className="space-y-2">
-                    <h4 className="font-medium text-foreground text-sm">Key Rules:</h4>
-                    <ul className="space-y-1">
-                      {event.rules.slice(0, 3).map((rule, ruleIndex) => (
-                        <li key={ruleIndex} className="flex items-start gap-2">
-                          <div className="w-1.5 h-1.5 bg-primary rounded-full mt-1.5 flex-shrink-0" />
-                          <span className="text-xs text-muted-foreground">{rule}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            );
-          })}
+            })()}
+          </div>
         </div>
       </div>
     </section>
