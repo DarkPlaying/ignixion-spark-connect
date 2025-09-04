@@ -165,7 +165,7 @@ const ScheduleSection = () => {
                 variant="hero"
                 size="lg"
                 className="text-xl px-12 py-6 font-bold bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 hover:shadow-2xl hover:shadow-primary/40 hover:scale-110 transition-all duration-500 animate-pulse"
-                onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSfg6ZqtYQ2CMef4qSCj5p2I8v66uZ4AuPz0VOV7oK2Y9MkfRQ/viewform?usp=dialog', '_blank')}
+                onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSdY8-wZf3GGy5b0ffDqPxxWDsnZ7QRUghbBNCXt2gfaHL_SRg/viewform', '_blank')}
               >
                 Register Now
               </Button>
