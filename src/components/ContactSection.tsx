@@ -2,44 +2,47 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { Mail, Phone, MapPin, Instagram, Twitter, Linkedin, Globe } from "lucide-react";
 const ContactSection = () => {
-  const organizers = [{
-    name: "Sarah Chen",
-    role: "Event Director",
-    email: "sarah@ignixion.com",
-    phone: "+91 98765 43210",
-    image: "/api/placeholder/80/80"
+  const staffCoordinators = [{
+    name: "Mrs. R. GAYATHRI",
+    role: "Staff Coordinator",
+    phone: "9789098326"
   }, {
-    name: "Alex Rodriguez",
-    role: "Technical Lead",
-    email: "alex@ignixion.com",
-    phone: "+91 98765 43211",
-    image: "/api/placeholder/80/80"
+    name: "Mrs. R. SOUNDHARYA DEVI", 
+    role: "Staff Coordinator",
+    phone: "8610253193"
+  }];
+
+  const studentCoordinators = [{
+    name: "PIOUS LARA I",
+    role: "Student Coordinator",
+    phone: "8124991847"
   }, {
-    name: "Priya Sharma",
-    role: "Creative Director",
-    email: "priya@ignixion.com",
-    phone: "+91 98765 43212",
-    image: "/api/placeholder/80/80"
+    name: "PARVEEN KHAN A",
+    role: "Student Coordinator", 
+    phone: "9080690686"
+  }, {
+    name: "VIJAY R",
+    role: "Student Coordinator",
+    phone: "9884280573"
+  }, {
+    name: "JEEVAN P",
+    role: "Student Coordinator",
+    phone: "9025476075"
   }];
   const socialLinks = [{
     icon: Instagram,
-    label: "Instagram",
-    href: "#",
+    label: "COAD VTRS",
+    href: "https://instagram.com/coad.vtrs",
     color: "hover:text-pink-500"
   }, {
-    icon: Twitter,
-    label: "Twitter",
-    href: "#",
-    color: "hover:text-blue-400"
-  }, {
-    icon: Linkedin,
-    label: "LinkedIn",
-    href: "#",
-    color: "hover:text-blue-600"
+    icon: Instagram,
+    label: "Vel Tech Arts Official",
+    href: "https://instagram.com/veltechartsofficial", 
+    color: "hover:text-pink-500"
   }, {
     icon: Globe,
     label: "Website",
-    href: "#",
+    href: "https://velsrscollege.com/",
     color: "hover:text-primary"
   }];
   return <section className="py-20 px-6 bg-background">
@@ -69,11 +72,9 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-foreground mb-1">Venue</h4>
-                    <p className="text-muted-foreground">
-                      Tech Innovation Center<br />
-                      Silicon Valley Campus<br />
-                      Bangalore, Karnataka 560100
-                    </p>
+                     <p className="text-muted-foreground">
+                       Vel Tech Ranga Sanku Arts College
+                     </p>
                   </div>
                 </div>
 
@@ -83,10 +84,9 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-foreground mb-1">General Inquiries</h4>
-                    <p className="text-muted-foreground">
-                      info@ignixion.com<br />
-                      support@ignixion.com
-                    </p>
+                     <p className="text-muted-foreground">
+                       coad@velsrscollege.com
+                     </p>
                   </div>
                 </div>
 
@@ -95,11 +95,17 @@ const ContactSection = () => {
                     <Phone className="text-accent" size={20} />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-foreground mb-1">Helpline</h4>
-                    <p className="text-muted-foreground">
-                      +91 98765 43200<br />
-                      Available 9 AM - 8 PM
-                    </p>
+                    <h4 className="font-semibold text-foreground mb-1">STAFF CO-ORDINATORS</h4>
+                    <div className="space-y-2">
+                      {staffCoordinators.map((coordinator) => (
+                        <div key={coordinator.name} className="text-muted-foreground">
+                          <div className="font-medium">{coordinator.name}</div>
+                          <a href={`tel:${coordinator.phone}`} className="text-sm hover:text-primary transition-colors">
+                            {coordinator.phone}
+                          </a>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -108,7 +114,7 @@ const ContactSection = () => {
             {/* Social Media */}
             <div className="bg-gradient-card p-8 rounded-2xl border border-border">
               <h3 className="text-2xl font-display font-semibold mb-6 text-foreground">
-                Follow Us
+                FOLLOW US ON:
               </h3>
               <div className="flex gap-4">
                 {socialLinks.map(social => {
@@ -130,30 +136,26 @@ const ContactSection = () => {
           {/* Organizers */}
           <div className="scroll-fade-in">
             <div className="bg-gradient-card p-8 rounded-2xl border border-border">
-              <h3 className="text-2xl font-display font-semibold mb-8 text-foreground">
-                Meet the Organizers
+               <h3 className="text-2xl font-display font-semibold mb-8 text-foreground">
+                Student Coordinators
               </h3>
               
               <div className="space-y-6">
-                {organizers.map((organizer, index) => <div key={organizer.name} className="flex items-center gap-4 p-4 rounded-xl bg-muted/20 hover:bg-muted/30 transition-colors duration-300" style={{
+                {studentCoordinators.map((coordinator, index) => <div key={coordinator.name} className="flex items-center gap-4 p-4 rounded-xl bg-muted/20 hover:bg-muted/30 transition-colors duration-300" style={{
                 animationDelay: `${index * 0.1}s`
               }}>
                     <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center text-primary-foreground font-display font-bold text-lg">
-                      {organizer.name.split(' ').map(n => n[0]).join('')}
+                      {coordinator.name.split(' ').map(n => n[0]).join('')}
                     </div>
                     
                     <div className="flex-1">
-                      <h4 className="font-semibold text-foreground">{organizer.name}</h4>
-                      <p className="text-sm text-primary mb-2">{organizer.role}</p>
+                      <h4 className="font-semibold text-foreground">{coordinator.name}</h4>
+                      <p className="text-sm text-primary mb-2">{coordinator.role}</p>
                       
                       <div className="flex flex-col gap-1">
-                        <a href={`mailto:${organizer.email}`} className="text-sm text-muted-foreground hover:text-primary transition-colors duration-300 flex items-center gap-2">
-                          <Mail size={14} />
-                          {organizer.email}
-                        </a>
-                        <a href={`tel:${organizer.phone}`} className="text-sm text-muted-foreground hover:text-primary transition-colors duration-300 flex items-center gap-2">
+                        <a href={`tel:${coordinator.phone}`} className="text-sm text-muted-foreground hover:text-primary transition-colors duration-300 flex items-center gap-2">
                           <Phone size={14} />
-                          {organizer.phone}
+                          {coordinator.phone}
                         </a>
                       </div>
                     </div>
