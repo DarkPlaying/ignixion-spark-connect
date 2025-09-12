@@ -15,7 +15,8 @@ const TechnicalEventsSection = () => {
         "Original projects only - no plagiarism",
         "Follow the allotted time and theme guidelines",
         "Projects will be showcased to judges and staff",
-        "Judged on innovation, functionality, and presentation"
+        "Judged on innovation, functionality, and presentation",
+        "Judges' decision is final."
       ],
       color: "border-primary/30 hover:border-primary"
     },
@@ -29,7 +30,8 @@ const TechnicalEventsSection = () => {
         "Must be original work with proper documentation",
         "Responsive design and cross-browser compatibility required",
         "Showcase to panel of industry experts",
-        "Evaluation based on creativity, technical implementation, and user experience"
+        "Evaluation based on creativity, technical implementation, and user experience",
+        "Judges' decision is final."
       ],
       color: "border-secondary/30 hover:border-secondary"
     },
@@ -43,7 +45,8 @@ const TechnicalEventsSection = () => {
         "Problem statement projected live on event day",
         "Limited time to develop solution",
         "Judged on speed, accuracy, and solution effectiveness",
-        "No external help or pre-written code allowed"
+        "No external help or pre-written code allowed",
+        "Judges' decision is final."
       ],
       color: "border-accent/30 hover:border-accent"
     },
@@ -57,7 +60,8 @@ const TechnicalEventsSection = () => {
         "Submit paper by deadline (no extensions)",
         "10-15 minute presentation + 5 minute Q&A",
         "Judged on quality of research, clarity of presentation, and originality",
-        "IEEE format required for paper submission"
+        "IEEE format required for paper submission",
+        "Judges' decision is final."
       ],
       color: "border-highlight/30 hover:border-highlight"
     },
@@ -71,7 +75,8 @@ const TechnicalEventsSection = () => {
         "Covers programming, algorithms, current tech trends",
         "Multiple rounds: screening, rapid-fire, buzzer round",
         "Points awarded for correct answers",
-        "Negative marking may apply in final rounds"
+        "Negative marking may apply in final rounds",
+        "Judges' decision is final."
       ],
       color: "border-primary/30 hover:border-primary"
     },
@@ -85,7 +90,8 @@ const TechnicalEventsSection = () => {
         "1 hour time limit",
         "Raw footage and theme provided on spot",
         "Bring your own editing software and plugins",
-        "Judged on creativity, storytelling, and technical execution"
+        "Judged on creativity, storytelling, and technical execution",
+        "Judges' decision is final."
       ],
       color: "border-secondary/30 hover:border-secondary"
     },
@@ -100,7 +106,8 @@ const TechnicalEventsSection = () => {
         "Theme will be announced on the spot",
         "Maximum film duration: 7 minutes",
         "Bring your own filming and editing equipment",
-        "Judging criteria: originality, storytelling, cinematography, editing, and overall impact"
+        "Judging criteria: originality, storytelling, cinematography, editing, and overall impact",
+        "Judges' decision is final."
       ],
       color: "border-accent/30 hover:border-accent"
     }

@@ -7,7 +7,7 @@ const EventGlanceSection = () => {
     {
       icon: Calendar,
       label: "Date",
-      value: "18th & 19th August 2025",
+      value: "25th and 26th SEPTEMBER 2025",
       color: "text-primary"
     },
     {
@@ -19,7 +19,7 @@ const EventGlanceSection = () => {
     {
       icon: MapPin,
       label: "Venue",
-      value: "Vel Dr. RR & Dr. SR Convention Centre, Chennai",
+      value: "Vel Tech Ranga Sanku Arts College",
       color: "text-accent"
     }
   ];

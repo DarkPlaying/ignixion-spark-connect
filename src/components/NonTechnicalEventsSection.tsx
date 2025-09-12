@@ -14,7 +14,8 @@ const NonTechnicalEventsSection = () => {
         "Both group and solo performances welcome",
         "Costumes and props encouraged",
         "Judged on choreography, creativity, and stage presence",
-        "All dance styles welcome"
+        "All dance styles welcome",
+        "Judges' decision is final."
       ],
       gradient: "from-primary/20 to-secondary/20",
       iconColor: "text-primary"
@@ -30,7 +31,8 @@ const NonTechnicalEventsSection = () => {
         "Team size: 4-6 members",
         "Appropriate dress code required",
         "Props and accessories allowed",
-        "Judged on presentation, creativity, and confidence"
+        "Judged on presentation, creativity, and confidence",
+        "Judges' decision is final."
       ],
       gradient: "from-secondary/20 to-accent/20",
       iconColor: "text-secondary"
@@ -46,7 +48,8 @@ const NonTechnicalEventsSection = () => {
         "Solo or duet performances",
         "Karaoke tracks allowed (submit MP3)",
         "Original compositions welcome",
-        "Judged on vocal quality, stage presence, and song choice"
+        "Judged on vocal quality, stage presence, and song choice",
+        "Judges' decision is final."
       ],
       gradient: "from-accent/20 to-highlight/20",
       iconColor: "text-accent"
@@ -62,7 +65,8 @@ const NonTechnicalEventsSection = () => {
         "Team of 2 members",
         "Bring your own ingredients and basic utensils",
         "Kitchen facilities and gas provided",
-        "Judged on creativity, taste, hygiene, and presentation"
+        "Judged on creativity, taste, hygiene, and presentation",
+        "Judges' decision is final."
       ],
       gradient: "from-highlight/20 to-primary/20",
       iconColor: "text-highlight"
@@ -78,7 +82,8 @@ const NonTechnicalEventsSection = () => {
         "Individual participation",
         "Theme announced on the spot",
         "Bring your own face painting materials",
-        "Judged on creativity, neatness, and theme relevance"
+        "Judged on creativity, neatness, and theme relevance",
+        "Judges' decision is final."
       ],
       gradient: "from-secondary/20 to-primary/20",
       iconColor: "text-secondary"
