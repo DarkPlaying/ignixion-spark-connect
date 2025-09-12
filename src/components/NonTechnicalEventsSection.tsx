@@ -168,14 +168,20 @@ const NonTechnicalEventsSection = () => {
                     {/* Rules */}
                     <div className="space-y-2">
                       <h4 className="font-medium text-foreground text-sm">Key Rules:</h4>
-                      <ul className="space-y-1">
-                        {event.rules.slice(0, 3).map((rule, ruleIndex) => (
-                          <li key={ruleIndex} className="flex items-start gap-2">
-                            <div className="w-1.5 h-1.5 bg-primary rounded-full mt-1.5 flex-shrink-0" />
-                            <span className="text-xs text-muted-foreground">{rule}</span>
-                          </li>
-                        ))}
-                      </ul>
+                       <ul className="space-y-1">
+                         {event.rules.slice(0, 3).map((rule, ruleIndex) => (
+                           <li key={ruleIndex} className="flex items-start gap-2">
+                             <div className="w-1.5 h-1.5 bg-primary rounded-full mt-1.5 flex-shrink-0" />
+                             <span className="text-xs text-muted-foreground">{rule}</span>
+                           </li>
+                         ))}
+                         {!event.rules.slice(0, 3).some(rule => rule.includes("Judges' decision is final")) && (
+                           <li className="flex items-start gap-2">
+                             <div className="w-1.5 h-1.5 bg-primary rounded-full mt-1.5 flex-shrink-0" />
+                             <span className="text-xs text-muted-foreground">Judges' decision is final.</span>
+                           </li>
+                         )}
+                       </ul>
                     </div>
                   </div>
                 </div>
@@ -226,14 +232,20 @@ const NonTechnicalEventsSection = () => {
                       {/* Rules */}
                       <div className="space-y-2">
                         <h4 className="font-medium text-foreground text-sm">Key Rules:</h4>
-                        <ul className="space-y-1">
-                          {event.rules.slice(0, 3).map((rule, ruleIndex) => (
-                            <li key={ruleIndex} className="flex items-start gap-2">
-                              <div className="w-1.5 h-1.5 bg-primary rounded-full mt-1.5 flex-shrink-0" />
-                              <span className="text-xs text-muted-foreground">{rule}</span>
-                            </li>
-                          ))}
-                        </ul>
+                         <ul className="space-y-1">
+                           {event.rules.slice(0, 3).map((rule, ruleIndex) => (
+                             <li key={ruleIndex} className="flex items-start gap-2">
+                               <div className="w-1.5 h-1.5 bg-primary rounded-full mt-1.5 flex-shrink-0" />
+                               <span className="text-xs text-muted-foreground">{rule}</span>
+                             </li>
+                           ))}
+                           {!event.rules.slice(0, 3).some(rule => rule.includes("Judges' decision is final")) && (
+                             <li className="flex items-start gap-2">
+                               <div className="w-1.5 h-1.5 bg-primary rounded-full mt-1.5 flex-shrink-0" />
+                               <span className="text-xs text-muted-foreground">Judges' decision is final.</span>
+                             </li>
+                           )}
+                         </ul>
                       </div>
                     </div>
                   </div>
