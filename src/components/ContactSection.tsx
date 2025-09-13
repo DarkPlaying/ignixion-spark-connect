@@ -53,7 +53,7 @@ const ContactSection = () => {
             Get In Touch
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Have questions? Need assistance? Our team is here to help you make the most of IGNIXION
+            Have questions? Need assistance? Our team is here to help you make the most of IGNIXION'25
           </p>
         </div>
 
@@ -128,7 +128,7 @@ const ContactSection = () => {
               </div>
               <p className="text-muted-foreground mt-4 text-sm">
                 Stay updated with the latest announcements, behind-the-scenes content, 
-                and highlights from IGNIXION!
+                and highlights from IGNIXION'25!
               </p>
             </div>
           </div>
@@ -171,7 +171,7 @@ const ContactSection = () => {
         {/* FAQ Section */}
         <div className="mt-16 text-center scroll-fade-in">
           <div className="bg-gradient-card p-8 rounded-2xl border border-border max-w-4xl mx-auto">
-            <h3 className="text-2xl font-display font-semibold mb-4 text-foreground">Thank You for Being Part of IGNIXION</h3>
+            <h3 className="text-2xl font-display font-semibold mb-4 text-foreground">Thank You for Being Part of IGNIXION'25</h3>
             <p className="text-muted-foreground mb-6">We can’t wait to see your creativity and innovation shine. ✨
 Stay tuned for updates, and let’s spark something extraordinary together!</p>
             

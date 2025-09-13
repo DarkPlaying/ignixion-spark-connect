@@ -73,7 +73,7 @@ const ScheduleSection = () => {
     {
       time: "01:00 PM",
       title: "Award Ceremony",
-      description: "Prize distribution to winners, closing remarks, and celebration of the IGNIXION journey.",
+      description: "Prize distribution to winners, closing remarks, and celebration of the IGNIXION'25 journey.",
       icon: Award,
       status: "upcoming"
     },
@@ -125,7 +125,7 @@ const ScheduleSection = () => {
             Event Schedule
           </h2>
           <p className="text-xl text-muted-foreground">
-            Your complete timeline for the IGNIXION experience
+            Your complete timeline for the IGNIXION'25 experience
           </p>
         </div>
 
@@ -133,7 +133,7 @@ const ScheduleSection = () => {
         <div className="relative mb-20">
           <div className="text-center mb-12">
             <h3 className="text-3xl md:text-4xl font-display font-bold mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              Event Schedule Day - 1
+              Day-1
             </h3>
           </div>
           
@@ -201,7 +201,7 @@ const ScheduleSection = () => {
         <div className="relative mb-20">
           <div className="text-center mb-12">
             <h3 className="text-3xl md:text-4xl font-display font-bold mb-4 bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent">
-              Event Schedule Day - 2
+              Day-2
             </h3>
           </div>
           
@@ -274,7 +274,7 @@ const ScheduleSection = () => {
             
             <div className="relative z-10 text-center">
               <h3 className="text-3xl md:text-4xl font-display font-bold mb-4 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
-                Join IGNIXION
+                Join IGNIXION'25
               </h3>
               <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
                 Ready to spark your creativity? Register now and be part of this incredible journey

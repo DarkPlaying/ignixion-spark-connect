@@ -44,7 +44,7 @@ const HeroSection = () => {
         {/* Main Title */}
         <h1 className="text-6xl md:text-8xl lg:text-9xl font-display font-bold mb-6 animate-glow">
           <span className="bg-gradient-primary bg-clip-text text-transparent mx-0 px-[3px] py-0 my-[100px]">
-            IGNIXION
+            IGNIXION'25
           </span>
         </h1>
         

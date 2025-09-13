@@ -25,7 +25,7 @@ const AboutSection = () => {
         {/* Section Header */}
         <div className="text-center mb-16 scroll-fade-in">
           <h2 className="text-4xl md:text-5xl font-display font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent">
-            About IGNIXION
+            About IGNIXION'25
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">IGNIXION ’25 is not just an event—it’s a fusion of Technology and Arts, designed to spark creativity, innovation, and collaboration. This inter-college festival provides a vibrant platform for students to showcase their talents, exchange ideas, and build meaningful connections. </p>
         </div>

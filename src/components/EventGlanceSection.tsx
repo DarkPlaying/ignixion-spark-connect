@@ -33,7 +33,7 @@ const EventGlanceSection = () => {
             Event at a Glance
           </h2>
           <p className="text-lg text-muted-foreground">
-            Everything you need to know about IGNIXION '25
+            Everything you need to know about IGNIXION'25
           </p>
         </div>
 

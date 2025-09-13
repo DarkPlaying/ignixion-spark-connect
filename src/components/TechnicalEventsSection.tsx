@@ -8,10 +8,10 @@ const TechnicalEventsSection = () => {
     {
       icon: Code,
       title: "App Development Showcase",
-      teamSize: "2-4 members",
+      teamSize: "Up to 3 members",
       description: "Showcase your mobile application development skills with original, innovative projects.",
       rules: [
-        "Team size: 2-4 members maximum",
+        "Maximum of 3 members",
         "Original projects only - no plagiarism",
         "Follow the allotted time and theme guidelines",
         "Projects will be showcased to judges and staff",
@@ -38,10 +38,10 @@ const TechnicalEventsSection = () => {
     {
       icon: Zap,
       title: "Hackathon",
-      teamSize: "2-5 members",
+      teamSize: "Up to 3 members",
       description: "Fast-paced problem-solving challenge with live problem statements and real-time judging.",
       rules: [
-        "Team size: 2-5 members",
+        "Maximum of 3 members",
         "Problem statement projected live on event day",
         "Limited time to develop solution",
         "Judged on speed, accuracy, and solution effectiveness",
@@ -98,10 +98,10 @@ const TechnicalEventsSection = () => {
     {
       icon: Film,
       title: "Short Film",
-      teamSize: "Team (2–5 members)",
+      teamSize: "Up to 3 members",
       description: "Showcase your creativity by producing a short film within the given theme and time limit.",
       rules: [
-        "Team participation: 2–5 members",
+        "Maximum of 3 members",
         "Time limit: 48 hours for film submission",
         "Theme will be announced on the spot",
         "Maximum film duration: 7 minutes",
@@ -178,17 +178,34 @@ const TechnicalEventsSection = () => {
                     <p className="text-muted-foreground mb-6 leading-relaxed">
                       {event.description}
                     </p>
-                    <div>
-                      <h4 className="font-semibold text-foreground mb-3">Rules & Guidelines:</h4>
-                      <ul className="space-y-2">
-                        {event.rules.map((rule, ruleIndex) => (
-                          <li key={ruleIndex} className="flex items-start gap-3">
-                            <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
-                            <span className="text-muted-foreground">{rule}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
+                     <div>
+                       <h4 className="font-semibold text-foreground mb-3">Rules & Guidelines:</h4>
+                       <ul className="space-y-2">
+                         {event.rules.map((rule, ruleIndex) => (
+                           <li key={ruleIndex} className="flex items-start gap-3">
+                             <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
+                             <span className="text-muted-foreground">{rule}</span>
+                           </li>
+                         ))}
+                       </ul>
+                       
+                       {/* Add Rounds section for Hackathon */}
+                       {event.title === "Hackathon" && (
+                         <div className="mt-6">
+                           <h4 className="font-semibold text-foreground mb-3">Rounds:</h4>
+                           <ul className="space-y-2">
+                             <li className="flex items-start gap-3">
+                               <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
+                               <span className="text-muted-foreground">Round 1: 15 labs CTF challenge; top teams qualify for next round.</span>
+                             </li>
+                             <li className="flex items-start gap-3">
+                               <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
+                               <span className="text-muted-foreground">Round 2: Team discussion to solve coding problems (top 3 teams selected).</span>
+                             </li>
+                           </ul>
+                         </div>
+                       )}
+                     </div>
                   </div>
                 </div>
               </div>
