@@ -166,19 +166,25 @@ const NonTechnicalEventsSection = () => {
                     </p>
 
                     {/* Rules */}
-                    <div className="space-y-2">
+                    <div className="space-y-2 min-w-0">
                       <h4 className="font-medium text-foreground text-sm">Key Rules:</h4>
-                       <ul className="space-y-1">
+                       <ul 
+                         className="m-0 p-[8px_12px_12px_20px] sm:pl-5 leading-[1.55] sm:leading-[1.6] overflow-wrap-anywhere whitespace-normal list-outside" 
+                         style={{ listStylePosition: 'outside' }}
+                       >
                          {event.rules.slice(0, 3).map((rule, ruleIndex) => (
-                           <li key={ruleIndex} className="flex items-start gap-2">
+                           <li 
+                             key={ruleIndex} 
+                             className={`flex items-start gap-2 text-xs mb-[8px] ${ruleIndex === 2 ? 'mb-0' : ''}`}
+                           >
                              <div className="w-1.5 h-1.5 bg-primary rounded-full mt-1.5 flex-shrink-0" />
-                             <span className="text-xs text-muted-foreground">{rule}</span>
+                             <span className="text-muted-foreground min-w-0 break-words">{rule}</span>
                            </li>
                          ))}
                          {!event.rules.slice(0, 3).some(rule => rule.includes("Judges' decision is final")) && (
-                           <li className="flex items-start gap-2">
+                           <li className="flex items-start gap-2 text-xs mb-0">
                              <div className="w-1.5 h-1.5 bg-primary rounded-full mt-1.5 flex-shrink-0" />
-                             <span className="text-xs text-muted-foreground">Judges' decision is final.</span>
+                             <span className="text-muted-foreground min-w-0 break-words">Judges' decision is final.</span>
                            </li>
                          )}
                        </ul>
@@ -230,19 +236,25 @@ const NonTechnicalEventsSection = () => {
                       </p>
 
                       {/* Rules */}
-                      <div className="space-y-2">
+                      <div className="space-y-2 min-w-0">
                         <h4 className="font-medium text-foreground text-sm">Key Rules:</h4>
-                         <ul className="space-y-1">
+                         <ul 
+                           className="m-0 p-[8px_12px_12px_20px] sm:pl-5 leading-[1.55] sm:leading-[1.6] overflow-wrap-anywhere whitespace-normal list-outside" 
+                           style={{ listStylePosition: 'outside' }}
+                         >
                            {event.rules.slice(0, 3).map((rule, ruleIndex) => (
-                             <li key={ruleIndex} className="flex items-start gap-2">
+                             <li 
+                               key={ruleIndex} 
+                               className={`flex items-start gap-2 text-xs mb-[8px] ${ruleIndex === 2 ? 'mb-0' : ''}`}
+                             >
                                <div className="w-1.5 h-1.5 bg-primary rounded-full mt-1.5 flex-shrink-0" />
-                               <span className="text-xs text-muted-foreground">{rule}</span>
+                               <span className="text-muted-foreground min-w-0 break-words">{rule}</span>
                              </li>
                            ))}
                            {!event.rules.slice(0, 3).some(rule => rule.includes("Judges' decision is final")) && (
-                             <li className="flex items-start gap-2">
+                             <li className="flex items-start gap-2 text-xs mb-0">
                                <div className="w-1.5 h-1.5 bg-primary rounded-full mt-1.5 flex-shrink-0" />
-                               <span className="text-xs text-muted-foreground">Judges' decision is final.</span>
+                               <span className="text-muted-foreground min-w-0 break-words">Judges' decision is final.</span>
                              </li>
                            )}
                          </ul>
@@ -295,21 +307,29 @@ const NonTechnicalEventsSection = () => {
                         <h4 className="font-semibold text-foreground mb-2 flex items-center gap-2">
                           <span>⚡</span> General Rules
                         </h4>
-                        <ul className="space-y-1 text-muted-foreground">
-                          <li className="flex items-start gap-2">
-                            <span>•</span> Max 3 members per team
+                        <ul 
+                          className="m-0 p-[8px_12px_12px_18px] sm:pl-5 leading-[1.55] sm:leading-[1.6] overflow-wrap-anywhere whitespace-normal list-outside text-muted-foreground" 
+                          style={{ listStylePosition: 'outside' }}
+                        >
+                          <li className="flex items-start gap-2 mb-[8px] min-w-0">
+                            <span className="flex-shrink-0">•</span>
+                            <span className="break-words">Max 3 members per team</span>
                           </li>
-                          <li className="flex items-start gap-2">
-                            <span>•</span> Event has 2 rounds: Quiz + Auction
+                          <li className="flex items-start gap-2 mb-[8px] min-w-0">
+                            <span className="flex-shrink-0">•</span>
+                            <span className="break-words">Event has 2 rounds: Quiz + Auction</span>
                           </li>
-                          <li className="flex items-start gap-2">
-                            <span>•</span> Only calculators allowed (no mobiles/laptops)
+                          <li className="flex items-start gap-2 mb-[8px] min-w-0">
+                            <span className="flex-shrink-0">•</span>
+                            <span className="break-words">Only calculators allowed (no mobiles/laptops)</span>
                           </li>
-                          <li className="flex items-start gap-2">
-                            <span>•</span> Misbehavior = Disqualification
+                          <li className="flex items-start gap-2 mb-[8px] min-w-0">
+                            <span className="flex-shrink-0">•</span>
+                            <span className="break-words">Misbehavior = Disqualification</span>
                           </li>
-                          <li className="flex items-start gap-2">
-                            <span>•</span> Judges' decision is final
+                          <li className="flex items-start gap-2 mb-0 min-w-0">
+                            <span className="flex-shrink-0">•</span>
+                            <span className="break-words">Judges' decision is final</span>
                           </li>
                         </ul>
                       </div>
@@ -319,15 +339,21 @@ const NonTechnicalEventsSection = () => {
                         <h4 className="font-semibold text-foreground mb-2 flex items-center gap-2">
                           <span>🧠</span> Round 1 – Quiz
                         </h4>
-                        <ul className="space-y-1 text-muted-foreground">
-                          <li className="flex items-start gap-2">
-                            <span>•</span> 30 questions on cricket, IPL, sports
+                        <ul 
+                          className="m-0 p-[8px_12px_12px_18px] sm:pl-5 leading-[1.55] sm:leading-[1.6] overflow-wrap-anywhere whitespace-normal list-outside text-muted-foreground" 
+                          style={{ listStylePosition: 'outside' }}
+                        >
+                          <li className="flex items-start gap-2 mb-[8px] min-w-0">
+                            <span className="flex-shrink-0">•</span>
+                            <span className="break-words">30 questions on cricket, IPL, sports</span>
                           </li>
-                          <li className="flex items-start gap-2">
-                            <span>•</span> Attempt all within time limit
+                          <li className="flex items-start gap-2 mb-[8px] min-w-0">
+                            <span className="flex-shrink-0">•</span>
+                            <span className="break-words">Attempt all within time limit</span>
                           </li>
-                          <li className="flex items-start gap-2">
-                            <span>•</span> Top 10 teams qualify for Auction
+                          <li className="flex items-start gap-2 mb-0 min-w-0">
+                            <span className="flex-shrink-0">•</span>
+                            <span className="break-words">Top 10 teams qualify for Auction</span>
                           </li>
                         </ul>
                       </div>
@@ -337,18 +363,25 @@ const NonTechnicalEventsSection = () => {
                         <h4 className="font-semibold text-foreground mb-2 flex items-center gap-2">
                           <span>💰</span> Round 2 – Auction
                         </h4>
-                        <ul className="space-y-1 text-muted-foreground">
-                          <li className="flex items-start gap-2">
-                            <span>•</span> Budget: ₹60 Crores per team
+                        <ul 
+                          className="m-0 p-[8px_12px_12px_18px] sm:pl-5 leading-[1.55] sm:leading-[1.6] overflow-wrap-anywhere whitespace-normal list-outside text-muted-foreground" 
+                          style={{ listStylePosition: 'outside' }}
+                        >
+                          <li className="flex items-start gap-2 mb-[8px] min-w-0">
+                            <span className="flex-shrink-0">•</span>
+                            <span className="break-words">Budget: ₹60 Crores per team</span>
                           </li>
-                          <li className="flex items-start gap-2">
-                            <span>•</span> Buy exactly 8 players: 3 Batters, 2 Bowlers, 2 All-rounders, 1 Wicket-keeper
+                          <li className="flex items-start gap-2 mb-[8px] min-w-0">
+                            <span className="flex-shrink-0">•</span>
+                            <span className="break-words">Buy exactly 8 players: 3 Batters, 2 Bowlers, 2 All-rounders, 1 Wicket-keeper</span>
                           </li>
-                          <li className="flex items-start gap-2">
-                            <span>•</span> Player Rules: 2 Foreign, 5 Indian, 1 Uncapped, 1 Star Player (compulsory)
+                          <li className="flex items-start gap-2 mb-[8px] min-w-0">
+                            <span className="flex-shrink-0">•</span>
+                            <span className="break-words">Player Rules: 2 Foreign, 5 Indian, 1 Uncapped, 1 Star Player (compulsory)</span>
                           </li>
-                          <li className="flex items-start gap-2">
-                            <span>•</span> Teams not meeting criteria = eliminated
+                          <li className="flex items-start gap-2 mb-0 min-w-0">
+                            <span className="flex-shrink-0">•</span>
+                            <span className="break-words">Teams not meeting criteria = eliminated</span>
                           </li>
                         </ul>
                       </div>
@@ -358,15 +391,21 @@ const NonTechnicalEventsSection = () => {
                         <h4 className="font-semibold text-foreground mb-2 flex items-center gap-2">
                           <span>🌟</span> Scoring & Winner
                         </h4>
-                        <ul className="space-y-1 text-muted-foreground">
-                          <li className="flex items-start gap-2">
-                            <span>•</span> Players have Fantasy Points
+                        <ul 
+                          className="m-0 p-[8px_12px_12px_18px] sm:pl-5 leading-[1.55] sm:leading-[1.6] overflow-wrap-anywhere whitespace-normal list-outside text-muted-foreground" 
+                          style={{ listStylePosition: 'outside' }}
+                        >
+                          <li className="flex items-start gap-2 mb-[8px] min-w-0">
+                            <span className="flex-shrink-0">•</span>
+                            <span className="break-words">Players have Fantasy Points</span>
                           </li>
-                          <li className="flex items-start gap-2">
-                            <span>•</span> Team score = Fantasy Points + Balance left
+                          <li className="flex items-start gap-2 mb-[8px] min-w-0">
+                            <span className="flex-shrink-0">•</span>
+                            <span className="break-words">Team score = Fantasy Points + Balance left</span>
                           </li>
-                          <li className="flex items-start gap-2">
-                            <span>•</span> Highest valid score = Winner
+                          <li className="flex items-start gap-2 mb-0 min-w-0">
+                            <span className="flex-shrink-0">•</span>
+                            <span className="break-words">Highest valid score = Winner</span>
                           </li>
                         </ul>
                       </div>
