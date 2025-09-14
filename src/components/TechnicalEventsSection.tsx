@@ -46,6 +46,7 @@ const TechnicalEventsSection = () => {
         "Limited time to develop solution",
         "Judged on speed, accuracy, and solution effectiveness",
         "No external help or pre-written code allowed",
+        "Use of AI tools (ChatGPT, Copilot, Gemini, Claude, Llama, etc.) in any form during the hackathon is prohibited; any team using AI or AI‑generated content will be immediately disqualified",
         "Judges' decision is final."
       ],
       color: "border-accent/30 hover:border-accent"
