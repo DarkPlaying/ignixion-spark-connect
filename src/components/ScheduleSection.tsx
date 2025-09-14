@@ -64,7 +64,7 @@ const ScheduleSection = () => {
       status: "upcoming"
     },
     {
-      time: "01:00 PM",
+      time: "12:30 PM",
       title: "Lunch Break",
       description: "Networking session and refreshments",
       icon: Clock,
