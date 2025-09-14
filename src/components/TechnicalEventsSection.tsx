@@ -181,45 +181,38 @@ const TechnicalEventsSection = () => {
                     </p>
                      <div className="min-w-0">
                        <h4 className="font-semibold text-foreground mb-3">Rules & Guidelines:</h4>
-                        <ul 
-                          className="m-0 p-[10px_16px_16px_22px] sm:pl-5 leading-[1.55] sm:leading-[1.6] overflow-wrap-anywhere whitespace-normal list-outside" 
-                          style={{ listStylePosition: 'outside' }}
-                        >
-                          {event.rules.map((rule, ruleIndex) => (
-                            <li 
-                              key={ruleIndex} 
-                              className={`flex items-start gap-3 text-[0.95rem] sm:text-base mb-[10px] last:mb-0 ${ruleIndex < event.rules.length - 1 ? 'mb-[10px]' : 'mb-0'} ${isOpen ? 'scroll-fade-in' : ''}`}
-                              style={{ animationDelay: isOpen ? `${ruleIndex * 0.1}s` : '0s' }}
-                            >
-                              <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
-                              <span className="text-muted-foreground min-w-0 break-words">{rule}</span>
-                            </li>
-                          ))}
-                        </ul>
+                       <ul 
+                         className="m-0 p-[10px_16px_16px_22px] sm:pl-5 leading-[1.55] sm:leading-[1.6] overflow-wrap-anywhere whitespace-normal list-outside" 
+                         style={{ listStylePosition: 'outside' }}
+                       >
+                         {event.rules.map((rule, ruleIndex) => (
+                           <li 
+                             key={ruleIndex} 
+                             className={`flex items-start gap-3 text-[0.95rem] sm:text-base mb-[10px] last:mb-0 ${ruleIndex < event.rules.length - 1 ? 'mb-[10px]' : 'mb-0'}`}
+                           >
+                             <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
+                             <span className="text-muted-foreground min-w-0 break-words">{rule}</span>
+                           </li>
+                         ))}
+                       </ul>
                        
                         {/* Add Rounds section for Hackathon */}
                         {event.title === "Hackathon" && (
                           <div className="mt-6 min-w-0">
                             <h4 className="font-semibold text-foreground mb-3">Rounds:</h4>
-                             <ul 
-                               className="m-0 p-[10px_16px_16px_22px] sm:pl-5 leading-[1.55] sm:leading-[1.6] overflow-wrap-anywhere whitespace-normal list-outside" 
-                               style={{ listStylePosition: 'outside' }}
-                             >
-                               <li 
-                                 className={`flex items-start gap-3 text-[0.95rem] sm:text-base mb-[10px] ${isOpen ? 'scroll-fade-in' : ''}`}
-                                 style={{ animationDelay: isOpen ? `${event.rules.length * 0.1}s` : '0s' }}
-                               >
-                                 <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
-                                 <span className="text-muted-foreground min-w-0 break-words">Round 1: 15 labs CTF challenge; top teams qualify for next round.</span>
-                               </li>
-                               <li 
-                                 className={`flex items-start gap-3 text-[0.95rem] sm:text-base mb-0 ${isOpen ? 'scroll-fade-in' : ''}`}
-                                 style={{ animationDelay: isOpen ? `${(event.rules.length + 1) * 0.1}s` : '0s' }}
-                               >
-                                 <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
-                                 <span className="text-muted-foreground min-w-0 break-words">Round 2: Team discussion to solve coding problems (top 3 teams selected).</span>
-                               </li>
-                             </ul>
+                            <ul 
+                              className="m-0 p-[10px_16px_16px_22px] sm:pl-5 leading-[1.55] sm:leading-[1.6] overflow-wrap-anywhere whitespace-normal list-outside" 
+                              style={{ listStylePosition: 'outside' }}
+                            >
+                              <li className="flex items-start gap-3 text-[0.95rem] sm:text-base mb-[10px]">
+                                <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
+                                <span className="text-muted-foreground min-w-0 break-words">Round 1: 15 labs CTF challenge; top teams qualify for next round.</span>
+                              </li>
+                              <li className="flex items-start gap-3 text-[0.95rem] sm:text-base mb-0">
+                                <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
+                                <span className="text-muted-foreground min-w-0 break-words">Round 2: Team discussion to solve coding problems (top 3 teams selected).</span>
+                              </li>
+                            </ul>
                           </div>
                         )}
                      </div>
