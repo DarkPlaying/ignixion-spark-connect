@@ -46,8 +46,10 @@ const RegistrationSection = () => {
           <h3 className="text-2xl md:text-3xl font-display font-bold mb-8 text-center text-foreground">
             Technical Events
           </h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {events.filter(event => event.type === "Technical").map((event, index) => {
+          
+          {/* First 6 events in grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
+            {events.filter(event => event.type === "Technical").slice(0, 6).map((event, index) => {
               const Icon = event.icon;
               return (
                 <div
@@ -72,6 +74,35 @@ const RegistrationSection = () => {
                 </div>
               );
             })}
+          </div>
+
+          {/* Short Film centered */}
+          <div className="flex justify-center">
+            {(() => {
+              const event = events.filter(event => event.type === "Technical")[6]; // Short Film
+              const Icon = event.icon;
+              return (
+                <div
+                  className={`bg-gradient-card border-2 rounded-2xl p-6 transition-all duration-300 hover-lift scroll-fade-in ${event.color} max-w-sm w-full`}
+                  style={{ animationDelay: `0.6s` }}
+                >
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="p-3 bg-gradient-primary rounded-xl">
+                      <Icon size={24} className="text-primary-foreground" />
+                    </div>
+                    <h4 className="text-lg font-display font-semibold text-foreground">
+                      {event.name}
+                    </h4>
+                  </div>
+                  <Button 
+                    onClick={() => handleRegistration(event.name)}
+                    className="w-full bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 hover:shadow-lg hover:shadow-primary/30 transition-all duration-300 text-slate-950 font-semibold"
+                  >
+                    Register Now
+                  </Button>
+                </div>
+              );
+            })()}
           </div>
         </div>
 
