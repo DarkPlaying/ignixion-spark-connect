@@ -108,24 +108,6 @@ const RegistrationSection = () => {
             })}
           </div>
         </div>
-
-        {/* General Call-to-Action */}
-        <div className="mt-16 text-center scroll-fade-in">
-          <div className="relative bg-gradient-card p-8 md:p-12 rounded-3xl border border-border hover-glow">
-            <div className="absolute -inset-1 rounded-3xl bg-gradient-to-r from-primary/20 via-secondary/20 to-accent/20 blur-lg animate-pulse"></div>
-            <div className="relative z-10">
-              <p className="text-lg text-muted-foreground mb-6">
-                Ready to showcase your talents? Register for multiple events and maximize your chances of winning!
-              </p>
-              <Button 
-                onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSdY8-wZf3GGy5b0ffDqPxxWDsnZ7QRUghbBNCXt2gfaHL_SRg/viewform', '_blank')}
-                className="text-xl px-12 py-6 font-bold bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 hover:shadow-2xl hover:shadow-primary/40 hover:scale-110 transition-all duration-500 text-slate-950"
-              >
-                General Registration
-              </Button>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
