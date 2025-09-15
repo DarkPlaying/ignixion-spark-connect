@@ -25,9 +25,9 @@ const ContactSection = () => {
     role: "Student Coordinator",
     phone: "9884280573"
   }, {
-    name: "JEEVAN P",
+    name: "SUBASH M",
     role: "Student Coordinator",
-    phone: "9025476075"
+    phone: "9176116270"
   }];
   const socialLinks = [{
     icon: Instagram,
