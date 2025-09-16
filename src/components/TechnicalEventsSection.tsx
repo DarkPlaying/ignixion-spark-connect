@@ -108,8 +108,7 @@ const TechnicalEventsSection = () => {
         "18+ scenes are not allowed.",
         "Excessive blood or violent content is not allowed.",
         "Content/theme: open; any non‑adult, non‑violent concept is acceptable.",
-        "Judges' decision will be final.",
-        "Judges' decision is final."
+        "Judges' decision will be final."
       ],
       color: "border-accent/30 hover:border-accent"
     }
