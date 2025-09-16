@@ -100,15 +100,15 @@ const TechnicalEventsSection = () => {
     {
       icon: Film,
       title: "Short Film",
-      teamSize: "Up to 3 members",
+      teamSize: "Team participation: 2–4 members per film",
       description: "Showcase your creativity by producing a short film within the given theme and time limit.",
       rules: [
-        "Maximum of 3 members",
-        "Time limit: 48 hours for film submission",
-        "Theme will be announced on the spot",
-        "Maximum film duration: 7 minutes",
-        "Bring your own filming and editing equipment",
-        "Judging criteria: originality, storytelling, cinematography, editing, and overall impact",
+        "Team participation: 2–4 members per film",
+        "Duration: 1 to 10 minutes including titles and credits.",
+        "18+ scenes are not allowed.",
+        "Excessive blood or violent content is not allowed.",
+        "Content/theme: open; any non‑adult, non‑violent concept is acceptable.",
+        "Judges' decision will be final.",
         "Judges' decision is final."
       ],
       color: "border-accent/30 hover:border-accent"

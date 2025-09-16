@@ -284,7 +284,7 @@ const ScheduleSection = () => {
                 variant="hero"
                 size="lg"
                 className="text-xl px-12 py-6 font-bold bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 hover:shadow-2xl hover:shadow-primary/40 hover:scale-110 transition-all duration-500 animate-pulse"
-                onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSdY8-wZf3GGy5b0ffDqPxxWDsnZ7QRUghbBNCXt2gfaHL_SRg/viewform', '_blank')}
+                onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLScqY-3U-l-ePGHdlXUZHvzklz1NpswUExBSDlm_1GcCo6xw9Q/viewform?usp=dialog', '_blank')}
               >
                 Register Now
               </Button>
@@ -298,7 +298,7 @@ const ScheduleSection = () => {
             { label: "Total Events", value: "10+", color: "text-primary" },
             { label: "Expected Participants", value: "500+", color: "text-secondary" },
             { label: "Prize Pool", value: "₹50K+", color: "text-accent" },
-            { label: "Duration", value: "1 Day", color: "text-highlight" }
+            { label: "Duration", value: "2 Day", color: "text-highlight" }
           ].map((stat, index) => (
             <div key={stat.label} className="text-center p-6 bg-gradient-to-br from-card/50 to-card/20 backdrop-blur-sm rounded-2xl border border-border/50 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300">
               <div className={`text-3xl md:text-4xl font-display font-bold ${stat.color} mb-2`}>

@@ -14,7 +14,7 @@ const RegistrationSection = () => {
               </h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-12">Ready to spark your creativity? Register now and be part of this incredible journey . Join IGNIXION'25 and be part of an incredible journey where technology meets creativity.</p>
               
-              <Button onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSdY8-wZf3GGy5b0ffDqPxxWDsnZ7QRUghbBNCXt2gfaHL_SRg/viewform', '_blank')} className="text-xl px-12 py-6 font-bold bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 hover:shadow-2xl hover:shadow-primary/40 hover:scale-110 transition-all duration-500 animate-pulse text-slate-950">Register Now</Button>
+              <Button onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLScqY-3U-l-ePGHdlXUZHvzklz1NpswUExBSDlm_1GcCo6xw9Q/viewform?usp=dialog', '_blank')} className="text-xl px-12 py-6 font-bold bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 hover:shadow-2xl hover:shadow-primary/40 hover:scale-110 transition-all duration-500 animate-pulse text-slate-950">Register Now</Button>
             </div>
           </div>
         </div>
